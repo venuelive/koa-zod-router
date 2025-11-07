@@ -17,7 +17,48 @@ import {
 import { assertHandlers, assertPath, assertRouteFnSpec, assertUseSpec, methods, prepareMiddleware } from './util';
 import { validationMiddleware } from './validation-middleware';
 
-const zodRouter = <RouterState = DefaultState>(opts?: RouterOpts) => {
+interface ZodRouterInstance<RouterState = DefaultState> extends RouterMethods {
+  register: <H, P, Q, B, F, R>(
+    spec: RegisterSpec<RouterState, H, P, Q, B, F, R> | RouteSpec<RouterState, H, P, Q, B, F, R>,
+  ) => KoaRouter<RouterState>;
+  use: {
+    <State = RouterState, Context = DefaultContext>(
+      ...middleware: Array<KoaRouter.Middleware<State, Context>>
+    ): KoaRouter<State, Context>;
+    <State = RouterState, Context = DefaultContext>(
+      path: string | string[] | RegExp,
+      ...middleware: Array<KoaRouter.Middleware<State, Context>>
+    ): KoaRouter;
+    <
+      State = RouterState,
+      Headers = ZodTypeAny,
+      Params = ZodTypeAny,
+      Query = ZodTypeAny,
+      Body = ZodTypeAny,
+      Files = ZodTypeAny,
+      Response = ZodTypeAny,
+    >(
+      spec: UseSpec<State, Headers, Params, Query, Body, Files, Response>,
+    ): KoaRouter;
+  };
+  router: KoaRouter<RouterState>;
+  opts: KoaRouter.RouterOptions;
+  params: KoaRouter<RouterState>['params'];
+  stack: KoaRouter.Layer[];
+  all: KoaRouter['all'];
+  allowedMethods: KoaRouter['allowedMethods'];
+  match: KoaRouter['match'];
+  methods: KoaRouter['methods'];
+  middleware: KoaRouter['middleware'];
+  param: KoaRouter['param'];
+  prefix: KoaRouter['prefix'];
+  redirect: KoaRouter['redirect'];
+  route: KoaRouter['route'];
+  routes: KoaRouter['routes'];
+  url: KoaRouter['url'];
+}
+
+const zodRouter = <RouterState = DefaultState>(opts?: RouterOpts): ZodRouterInstance<RouterState> => {
   const _router = new KoaRouter<RouterState>(opts?.koaRouter);
   _router.use(bodyParser(opts?.bodyParser));
 

@@ -1,5 +1,14 @@
 # koa-zod-router
 
+## 3.0.1
+
+- Updated README
+- Do not pull types for koa v3 as this has been written for koa v2
+
+## 3.0.0
+
+- Replaced unmaintained dependency by `@koa/bodyparser`
+
 ## 2.3.0
 
 ### Minor Changes

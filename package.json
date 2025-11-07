@@ -1,6 +1,6 @@
 {
   "name": "@venue/koa-zod-router",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A Koa router with Zod validation and body parsing",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -75,6 +75,9 @@
   "peerDependencies": {
     "koa": ">=2.14.1 <3.x",
     "zod": ">=3.22.4 <4.x"
+  },
+  "resolutions": {
+    "@types/koa": "^2.15.0"
   },
   "keywords": [
     "nodejs",
