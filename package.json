@@ -1,6 +1,6 @@
 {
   "name": "@venue/koa-zod-router",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A Koa router with Zod validation and body parsing",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

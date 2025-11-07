@@ -1,5 +1,9 @@
 # koa-zod-router
 
+## 3.0.2
+
+- Update type definitions, rawBody is present due to using @koa/bodyparser
+
 ## 3.0.1
 
 - Updated README

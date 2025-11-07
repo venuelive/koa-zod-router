@@ -62,6 +62,7 @@ export interface ZodContext<Headers, Params, Query, Body, Files> extends Context
     params: Params;
     query: Query;
     files: Files;
+    rawBody: string;
   } & Request;
   invalid: ZodRouterInvalid<Headers, Params, Query, Body, Files>;
 }
