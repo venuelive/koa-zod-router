@@ -2,9 +2,9 @@
 
 Inspired by koa-joi-router, this package aims to provide a similar feature-set while leveraging Zod and Typescript to create typesafe routes and middlewares with built in I/O validation.
 
-![npm release](https://img.shields.io/npm/v/koa-zod-router?label=latest)
-[![Coverage Status](https://coveralls.io/repos/github/JakeFenley/koa-zod-router/badge.svg?branch=main)](https://coveralls.io/github/JakeFenley/koa-zod-router?branch=main)
-![downloads](https://img.shields.io/npm/dm/koa-zod-router)
+![npm release](https://img.shields.io/npm/v/@venue/koa-zod-router?label=latest)
+[![Coverage Status](https://coveralls.io/repos/github/venuelive/koa-zod-router/badge.svg?branch=main)](https://coveralls.io/github/venuelive/koa-zod-router?branch=main)
+![downloads](https://img.shields.io/npm/dm/@venue/koa-zod-router)
 
 [zod]: https://github.com/colinhacks/zod
 [coercion]: https://zod.dev/?id=coercion-for-primitives

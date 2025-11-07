@@ -1,7 +1,7 @@
 {
-  "name": "koa-zod-router",
-  "version": "2.3.0",
-  "description": "",
+  "name": "@venue/koa-zod-router",
+  "version": "3.0.0",
+  "description": "A Koa router with Zod validation and body parsing",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jakefenley/koa-zod-router"
+    "url": "https://github.com/venuelive/koa-zod-router"
   },
   "scripts": {
     "build": "rm -rf dist && tsup src/index.ts --format cjs,esm --dts",
@@ -27,6 +27,13 @@
     "release": "pnpm build:turbo && npm publish",
     "release:beta": "pnpm build:turbo && npm publish --tag beta"
   },
+  "maintainers": [
+    {
+      "name": "Venue Live",
+      "url": "https://github.com/venuelive",
+      "email": "help@venue.live"
+    }
+  ],
   "author": {
     "name": "Jake Fenley",
     "url": "https://github.com/jakefenley",
@@ -85,5 +92,6 @@
     "endpoint",
     "zod",
     "validation"
-  ]
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
